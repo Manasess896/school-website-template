@@ -1,0 +1,36 @@
+RewriteEngine On
+ Options -Indexes
+
+
+ErrorDocument 404 /404.php
+
+DirectoryIndex index.php
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.php[?\s] [NC]
+RewriteRule ^index\.php$ /home [R=301,L]
+
+RewriteRule ^home/?$ index.php [L]
+RewriteRule ^admin/login/?$ admin/login.php [L]
+RewriteRule ^admin/logout/?$ admin/logout.php [L]
+RewriteRule ^admin/dashboard/?$ admin/admin.php [L]
+RewriteRule ^dashboard?$ admin/admin.php [L]
+RewriteRule ^contact-us/?$ contact.php [L]
+RewriteRule ^news-events/?$ news-events.php [L]
+RewriteRule ^news&events?$ news-events.php [L]
+RewriteRule ^unsubscribe/?$ admin/unsubscribe.php [L]
+RewriteRule ^login/?$ admin/login.php [L]
+RewriteRule ^2fa-setup/?$ admin/2fa-setup.php [L]
+RewriteRule ^2fa-verify/?$ admin/2fa-verify.php [L]
+RewriteRule ^admin/2fa-verify/?$ admin/2fa-verify.php [L]
+RewriteRule ^admin/2fa-setup/?$ admin/2fa-setup.php [L]
+
+RewriteRule ^404/?$ 404.php [L]
+RewriteRule ^pexels-api.php$ - [R=404,L]
+RewriteRule ^media.php$ - [R=404,L]
+RewriteRule . 404.php [L]
+

@@ -1,0 +1,96 @@
+:root {
+  --lime-primary: #bfcc36;
+
+  --lime-secondary: #93c01f;
+
+  --lime-dark: #7a9e0e;
+
+  --lime-light: #f2f7e5;
+
+  --lime-accent: #d4e157;
+
+  --lime-bright: #e6ee9c;
+
+  --lime-shadow: rgba(191, 204, 54, 0.3);
+  --lime-gradient: linear-gradient(135deg, #bfcc36, #93c01f);
+  --lime-gradient-dark: linear-gradient(135deg, #93c01f, #7a9e0e);
+
+  --lime-text: #2d3b12;
+
+  --lime-contrast: #5c0099;
+  --lime-warning: #ffc107;
+
+  --lime-danger: #ff5252;
+  --lime-white: #ffffff;
+
+  --primary-color: #28a745; 
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius: 0.5rem;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+body.admin-login {
+  background-color: var(--light-color);
+  font-family: var(--font-family);
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.login-card .card-header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.login-card .card-header h4 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.login-card .card-body {
+  padding: 2rem;
+}
+
+.admin-dashboard .card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1.5rem;
+}
+
+.admin-dashboard .card-header {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.navbar-dark.bg-success {
+  background-color: var(--primary-color) !important;
+}
