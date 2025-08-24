@@ -16,7 +16,9 @@ RUN set -eux; \
   curl \
   build-essential \
   pkg-config \
-  autoconf; \
+  autoconf \
+  libssl-dev \
+  libsasl2-dev; \
   docker-php-ext-configure gd --with-freetype --with-jpeg; \
   docker-php-ext-install -j"$(nproc)" intl zip mbstring exif gd opcache; \
   pecl install mongodb; \
