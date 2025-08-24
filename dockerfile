@@ -41,4 +41,6 @@ RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
   echo 'opcache.preload_user=www-data'; \
   } >> /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
 
+RUN echo 'variables_order = "EGPCS"' > /usr/local/etc/php/conf.d/env-vars.ini
+
 EXPOSE 80
